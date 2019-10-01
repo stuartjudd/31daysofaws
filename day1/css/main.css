@@ -1,0 +1,234 @@
+/* 
+0 - 600px:      Phone (max-width: 37.5em)
+600 - 900px:    Tablet portrait (max-width: 56.25em)
+900 - 1200px:   Tablet landscape (max-width: 75em)
+[1200 - 1800] is where our normal styles apply 
+(min-width: 112.5em or max-width depending on if you are using Large desktop)
+1800px + :      Large desktop  
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em = 16px
+*/
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  font-size: 1.6rem;
+}
+h7 {
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+/*home page only */
+.main-header {
+  /* background: url(../img/bg1.png), linear-gradient(to right, #56ccf2, #2c7feb) ;  */
+  background: linear-gradient(to right, #0097fa, #01d5fd);
+  background-size: cover;
+  background-position: center;
+  min-height: 360px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+/* all other pages */
+.main-header2 {
+  /*  background: url(../img/bg1.png);  */
+  background-size: cover;
+  /* background-color: #0882ca;  */
+  background: linear-gradient(to right, #0097fa, #01d5fd);
+  background-position: center;
+  height: 64px;
+  color: #fff;
+  padding-bottom: 20px;
+}
+nav ul a {
+  padding: 0 10px;
+  font-size: 1.7rem;
+}
+.row {
+  margin-top: 25px;
+}
+.main-header .showcase {
+  padding-top: 50px;
+}
+
+.main-header-inner .showcase {
+  padding: 2px;
+}
+
+.active-link {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.card-panel {
+  min-height: 220px;
+}
+
+.tabs .indicator {
+  background-color: #2196f3 !important;
+  height: 3px;
+}
+.tabs {
+  background-color: #ababab;
+  background-color: #1a364c;
+}
+
+.btn-extend {
+  display: block;
+  width: 100%;
+}
+/*
+img.responsive-img {
+  max-width: 180px;
+}
+*/
+.flow-text {
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
+/* code to support coding styles - START */
+
+.post-highlight pre {
+  border: 1px dashed #ccc;
+  background-color: #f2f2f2;
+  margin: 0;
+  font-size: 0;
+}
+
+pre code {
+  display: block;
+  padding: 10px 20px;
+  border-left: 5px solid #15aabf;
+  line-height: 1.4;
+  overflow: auto;
+  background-color: lightgray;
+}
+
+code {
+  font-family: source-code-pro, monospace;
+  font-size: 1.25rem;
+}
+
+.post {
+  margin-top: 10px;
+  line-height: 1.75;
+  font-size: 1.6rem;
+}
+.post time {
+  display: block;
+  color: #767676;
+  font-weight: 700;
+}
+
+.post-html blockquote {
+  padding: 2rem;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  margin-left: 2rem;
+}
+
+.page-heading {
+  font-size: 4.3rem;
+  line-height: 110%;
+  margin: 1.95rem 0 1.1rem 0;
+  color: #444;
+  font-weight: 500;
+}
+h2 {
+  font-size: 3.5rem;
+  line-height: 110%;
+  margin: 1.95rem 0 1.6rem 0;
+}
+.box {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+.box-coda {
+  display: flex;
+  margin-top: 60px;
+  color: #6e6e6e;
+}
+
+.box-coda svg {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+}
+svg {
+  fill: currentColor;
+}
+/* code to support coding styles - END */
+
+/* Media Queries to change the text size based on the screen size */
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 58.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .main-header2 {
+    height: 56px;
+  }
+}
+
+/* showing off visual studio color extension
+#1B1786
+#0773EF
+#052B50
+#907141
+#5B6F6A
+#261411
+*/
+.post-insert ul.disc li {
+  list-style-type: circle;
+  margin-left: 25px;
+}
+
+li {
+  margin-left: 13px;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 7px;
+  background-color: #f2f2f2;
+}
+
+.card a {
+  color: #039be5;
+  font-size: 1.6rem;
+}
+
+.page-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #1a364c;
+  border: 0px;
+  margin: 0px;
+}
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

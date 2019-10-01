@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>  
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>31 days of AWS</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="main-header2">
+    <nav class="transparent">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">31 days of AWS</a>
+          <a href="#" data-activates="mobile-nav" class="button-collapse">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="right hide-on-med-and-down">            
+            <li>
+              <a href="index.html">HOME</a>
+            </li>                     
+            <li>
+                <a href="days.html">DAYS</a>
+              </li>
+            <li>
+              <a href="cv.html">CV </a>
+            </li>            
+            <li>
+              <a href="blog.html" class="btn blue modal-trigger">Blog</a>
+            </li>
+            <li>
+                <a href="https://github.com/stuartjudd/31daysofaws">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/stuart-judd-8723782/">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>            
+          </ul>
+          <ul class="side-nav" id="mobile-nav">
+            <h4 class="blue-text text-darken-4 center">31 days of AWS</h4>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a href="index.html">
+                <i class="fa fa-home grey-text text-darken-4"></i> HOME</a>
+            </li>                    
+            <li>
+                <a href="days.html">
+                  <i class="fa fa-calendar-alt grey-text text-darken-4"></i> DAYS</a>
+              </li>            
+              <li>
+                  <a href="cv.html">
+                    <i class="fa fa-file grey-text text-darken-4"></i> CV</a>
+                </li>            
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a href="blog.html" class="btn blue">BLOG</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section section-features ">
+      <div class="container">
+       <!-- This will change for each day -->
+        <article>
+          <h1 class="page-heading">Creating a website </h1>
+          <div class="post">
+            <time datetime="2019-08-01">October 1, 2019</time>
+            <div class="post-html">
+              <p>Let's build a website, so we can showcase all the code we build over the next 31 days.  </p>
+              <blockquote>
+                <p><em>"HTML sites can still be amazing and are extremely robust for static content.  This site will run for free, never go down and still serve it's purpose.  I will be creating some dynamic sites too and probably explore react and gatsby, but don't over complicate the design if it isn't neccessary."</em></p>
+                </blockquote>
+              <div class="post-insert">
+                <ul class="disc">
+                  <li><a href="#1">Sign-up to AWS free tier</a></li>
+                  <li><a href="#2">Create a domain to host the site</a></li>
+                  <li><a href="#3">Configure s3 to host the website</a></li>
+                  <li><a href="#4a">Create a FREE certificate so we can host our site on SSL/TLS</a></li>                  
+                  <li><a href="#4">Add a cloudfront CDN to ensure the site is FAST</a></li>
+                  <li><a href="#5">Add tags so we can check our billing</a></li>
+                  <li><a href="#6">Non AWS Nugget</a></li>
+                  <li><a href="#7">Wrapping Up</a></li>
+                  
+                </ul>
+              </div>
+              <a name="1"></a> 
+              <h2>Sign-up to AWS free tier</h2>
+                <p>AWS can be cheap or expensive based on the design of the application you are building.  We will try to take advantage of modern cloud services to ensure the costs remain low.  This website should remain mostly free except for the domain name registration which is optional.</p>
+              <p>The first thing to do, is sign-up at <a href="https://aws.amazon.com/free/">AWS free tier</a>.  You can see we get 25GB of DynamoDB, 5GB of s3 storage and over 1 million lambda calls for free.  </p>
+              <p>To sign up, you'll need a 
+                valid email account, mobile phone, credit card (don't worry, you shouldn't be charged), and just fill in your details and follow the sign-up procedure.  AWS take security very seriosly.</p>
+                <p>
+                
+                If you get lost, checkout this support page 
+                <a href="https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/">https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/</a>
+                
+              </p>
+
+              <a name="2"></a> 
+              <h2>Create a domain to host the site</h2>
+              <p>Once you have an aws account, the next step is to register a domain.  This is an optional step, but I've found my fullname stuartjudd.com is available so I'm going to grab it. </p>
+            
+              <p>After signing-in, click services and type route53.  </p>
+              <p>Click Registered Domains in the left menu</p>
+              <p>Click Register domain in the top navigation</p>
+              
+              <p>Enter your desired domain name and check to make sure it is available. </p>
+
+      
+           
+              <img class="responsive-img" src="/img/blog/domainName.png" />
+
+              
+              <p>I am registering the domain for 1 year and have clicked auto-renewal, so I will be charged every year, until I cancel.  Some domain names and top level domains (such as .co, .io, etc) can be more expensive. It's really up to you. 
+              </p>
+              <p><AWS will process your information and send it to ICANN, who are a non profit organisation who regulate the namespaces of the internet.</p>
+
+              <p>Amazon will send you a verification email to make sure you entered your actual email address. Click the link in the email to verify the email you provided is legitimate.</p>
+
+                 <p> <strong>Agree to the Terms and Conditions.</strong></p>
+                 
+                 <img class="responsive-img" src="/img/blog/terms.png" />
+
+              <p>Success !  I have registered my domain.  It may take 24 hrs, but it usually registers within 60 minutes.  The next step is to copy our website to s3.
+              </p>
+
+              <a name="3"></a> 
+              <h2>Configure s3 to host the website</h2>
+              
+              <p>Click services in the top menu and type s3.  </p>
+              <p>Click <strong>Create Bucket</strong> button</p> 
+              <p>Ensure your bucket name matches your domain name (if setting up a domain name)</p>
+              <p>Choose the region closest to you or the region or a region which will give you the lowest latency.</p> 
+              
+              <img class="responsive-img" src="/img/blog/s3.png" style="max-width: 70%"/>
+              <p>Click the <strong>Next</strong> button</p> 
+              <p>Uncheck all to give public access to the bucket. </p> 
+              <p>Click the Next button and Create Bucket.</p>
+              <p>Click on the bucket name to open the S3 bucket.</p>
+              <p>Go to the Properties tab and Enable Static website hosting.</p>
+              <p>Add index.html or the file name of your landing page for the Index document and click save.</p>
+
+              <img class="responsive-img" src="/img/blog/staticwebsite.png" style="max-width: 70%" />
+              
+              <p><strong>Public Access</strong> If you didn't setup public access, you can add a bucket policy under Permissions | Bucket Policy.  Add the code below.  You just need to change the Resource to be the name of your bucket.  { change the stuartjudd.com bit }</p>
+              <div class="post-highlight" data-language="json">
+                  <pre class="language-html">
+                    <code class="language-html">{
+ "Version": "2019-08-01",
+ "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::stuartjudd.com/*"
+    }  
+  ]
+}</code>
+                  </pre>
+                </div>
+             
+                
+                <p>You can download this website from github, upload your own website or copy the code below and save it as index.html</p>
+                <div class="post-highlight" data-language="html">
+                    <pre class="language-html">
+                      <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;title&gt;Hello&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Hello from 31 days of AWS
+&lt;/body&gt;
+&lt;/html&gt;</code>
+                    </pre>
+                  </div>
+                <p>Copy the code up. Click Add Files.  I'm uploading this website.</p>
+                <p>Click the Upload Button or Next | Next | Next | Upload</p>
+                <img class="responsive-img" src="/img/blog/upload.png" style="max-width: 70%" />
+                
+                <p>Check that everything has worked </p>
+                <p>Click the properties tab</p>
+                <p>Click the Static website hosting card</p>
+                <p>Click the Endpoint. <a href="http://stuartjudd.com.s3-website-ap-southeast-2.amazonaws.com">http://stuartjudd.com.s3-website-ap-southeast-2.amazonaws.com</a>
+                </p>
+                <p>  It should open up the site in a new webpage</p>
+
+
+                <a name="4a"></a> 
+                <h2>Create a certificate so we can host our site on SSL/TLS</h2>    
+                <p>To run a website securely, you normally have to pay for a certificate from a company like verisign or godaddy.  AWS offer these certificates for free, so long as you are using their services.  This is good news 
+                as non https sites are frowned upon, with the big 4 browsers threatning to not support http sites in the future.
+                <a href="https://nakedsecurity.sophos.com/2018/03/12/with-4-months-to-switch-on-https-are-web-hosting-companies-ready/">Learn more here</a>
+                </p>     
+                
+                
+                <h4>AWS Free Certificate</h4>
+                <p>Click services in the top menu and type <strong>ACM - Certificate Manager</strong>. </p>
+                <p>Ensure you are in the N.Virginia region</p>
+                <p>Click Request a Certificate</p>
+                <p>Request a public Certificate</p>
+                <p>Click Request a Certificate</p>
+                <p>Type in your domain name with a *. so you can support all subdomains and select DNS as your validation method</p>
+                <p>Click Confirm and Request</p>
+                <img class="responsive-img" src="/img/blog/cert.png"  />
+                <p>Click the down arrow next to your *.domainName</p>
+                <p>Click the Create Record in Route53 button.  This will create a cname record dns record AWS use to confirm you as the owner of the domain.  It's very uesful when your domain name does not exist in the AWS ecosystem.</p>
+                <p>Click Continue - The validation status should change from Pending to Success</p>
+                <p>We will use this certificate in the next step</p>
+
+
+                <a name="4"></a> 
+                <h2>Add a cloudfront CDN to ensure the site is FAST</h2>                
+                <p>Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content, such as .html, .css, .js, and image files, to your users. CloudFront delivers your content through a worldwide network of data centers called edge locations</p>
+                
+                <p>Click services in the top menu and type <strong>cloudfront</strong>. </p>
+                <p>Click Create Distribution and then click Get Started </p>
+                <p>Use the drop-down menu to select your s3 bucket</p>
+                <p>Change the Cache behaviour to redirect http to https</p>
+                <img class="responsive-img" src="/img/blog/cdn.png"  />
+                <p>Add your domain name to the alternate domain names - I added www.stuartjudd.com</p>
+                
+                <p>Select Custom SSL Certificate and click in the select box</p>
+                <img class="responsive-img" src="/img/blog/customssl.PNG"  />
+                <p>Add index.html as the default root object</p>
+                <p>All the other settings should be fine</p>
+                <p>Click the Create Distribution button.  It may take a few hours for this to create and sync out to all the edge locations.</p>
+                              
+                <h4>Creating an alias record</h4>
+                <p>We just need to create an alias DNS record so when we go to our site <a href="https://www.stuartjudd.com">https://www.stuartjudd.com</a> the site opens up</p>
+                <p>Click services in the top menu and type <strong>route53</strong>. </p>
+                <p>Click Hosted Zones </p>
+                <p>Click the domain name link </p>
+                <p>Click Create Record Set </p>
+                <p>In the name field type www</p>
+                <p>Choose Alias - Yes</p>
+                <p>In the Enter Target name - select the cloudfront distributon we just created </p>
+                <p>Click Create</p>
+                <img class="responsive-img" src="/img/blog/arecord.png"  />
+                
+                <h4>Testing the site</h4>
+                <p>If all went well, you should be able to go to your site.  <a href="https://www.stuartjudd.com">https://www.stuartjudd.com</a> </p>
+
+                <a name="5"></a> 
+                <h2>Add tags so we can check our billing</h2>
+                <p>Click services and type s3.  </p>
+                <p>Click your bucket name which will take you to the overview tab </p>
+                <p>Click the Properties tab, then click the Tags card</p>
+                <p>Add the following tags, with everything in lowercase. You can add any other tags you might find useful in managing your resources.  </p>
+                <img class="responsive-img" src="/img/blog/tags.png" style="max-width: 70%" />
+
+                <p>You should also add tags to the cloudfront distributon and in the certificate manager for the resouces we are using.</p>
+                <p>These tags will assist us in billing and keeping track of all the resources we are using.
+                   We will be looking further into this later in the month.
+                </p>
+
+                <a name="6"></a> 
+                <h2>Non AWS Nugget</h2>
+                <p>This site was built using a css framework called Materialize, which is based on Google's design guidelines.  I normally wouldn't use a framework like this, but it did get me up and running quickly and allow me to focus on the AWS services.</p>
+
+                <h4>A couple of goodies for you</h4>
+                <p><a href="https://unsplash.com">UnSplash</a> is great for free images.  I used all the images on the <a href="days">days</a> page from this site.
+                  You can download the images form the site or include links with size recommendations for specific or random images </p>
+                  <div class="post-highlight" data-language="json">
+                      <pre class="language-html">
+                        <code class="language-html">
+&lt;img src=&quot;https://source.unsplash.com/tZc3vjPCk-Q/400x200&quot;&gt; 
+&lt;img src=&quot;https://source.unsplash.com/random/400x200&quot;&gt; 
+                    </code>
+                  </pre>
+                </div>
+                <p>
+                <img src="https://source.unsplash.com/tZc3vjPCk-Q/400x200"> 
+<img src="https://source.unsplash.com/random/400x200"> 
+                </p>
+                <h4>Font sizes for responsive design</h4> 
+                <p>The <a href="https://materializecss.com">Materialize</a> CSS Framework takes care of most of my responsive design considerations for this website.
+                  I like to design the sites around the following breakpoints:
+                </p>
+                <ul>
+                  <li>0 - 600px:      Phone (max-width: 37.5em)</li>
+                  <li>600 - 900px:    Tablet portrait (max-width: 56.25em)</li>
+                  <li>900 - 1200px:   Tablet landscape (max-width: 75em)</li>
+                  <li>[1200 - 1800] is where our normal styles apply </li>
+                  <li> 1800px + :      Large desktop  </li>                                                    
+                </ul>
+                <p>These are the breakpoints where you should change your fonts and design based on the site.  Eg when to display the hamburger menu</p>
+                <p>Add the following code to ensure you fonts scale nicely, based on the device you are on.  Play around until everything looks good, but this is a good place to start</p>
+
+                <div class="post-highlight" data-language="html">
+                    <pre class="language-html">
+                      <code class="language-html">
+/* Media Queries to change the text size based on the screen size */
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+html {
+  font-size: 58.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+html {
+  font-size: 55%;
+ }
+}
+@media only screen and (min-width: 112.5em) {
+html {
+font-size: 75%;
+ }
+}
+                  </code>
+                </pre>
+              </div>
+              <p>When defining the font-size property, an em is equal to the size of the font that applies to the parent of the element in question. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px.  16px x 62.5 = 10px for when viewing the site on a standard desktop. </p>
+
+            <a name="7"></a> 
+            <h2>Wrapping Up</h2>
+            <p>Congratulations.  You now have the skills to host secure static html sites with a registered domain name.  You can tweak your cloudfront CDN settings further to cache for longer periods of timeand use s3 to upload images and files.   These are the core skills for our day 1 project. </p>
+        </article>
+
+        <div class="box box-coda"><div class="box-coda-text"><h2 class="box-coda-heading">Hey, you reached the end!</h2><p>Feel free to check out my other <a href="/days.html"> day posts</a>
+          <div class="chip">s3</div>
+            <div class="chip">cloudfront</div>
+            <div class="chip">iam</div>
+            <div class="chip">route53</div>
+            <div class="chip">html</div>          
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="page-footer">
+          <div class="container">
+              <div class="center">                                   
+                  <p>
+                      <span class="blue-text text-lighten-1">More days </span> Coming soon | 31daysofaws@gmail.com
+                  </p>
+              </div>
+          </div>
+  </footer>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {    
+      $('.button-collapse').sideNav();        
+    });
+  </script>
+</body>
+</html>

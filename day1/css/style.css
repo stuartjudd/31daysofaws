@@ -1,0 +1,25 @@
+#container {
+  display: flex; /* establish flex container */
+  flex-direction: column; /* make main-axis vertical */
+  justify-content: center; /* align items vertically, in this case */
+  align-items: center; /* align items horizontally, in this case */
+  height: 100vh; /* for demo purposes */
+
+  background: url(../img/bg1.png), linear-gradient(to right, #56ccf2, #2c7feb);
+  background-size: cover;
+
+  background-position: center;
+}
+
+h2 {
+  color: #ffffff;
+}
+.box {
+  width: 400px;
+  margin: 5px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#bluebox {
+}
